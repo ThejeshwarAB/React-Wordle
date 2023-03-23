@@ -1,31 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useWordle from "../hooks/useWordle";
 import Grid from "./Grid";
 import KeyPad from "./Keypad";
+import Modal from "./Modal";
 
 const Wordle = ({ solution }) => {
     //custom hook useWordle is used here
-    const { currentGuess, guesses, history, isCorrect, turn, usedKeys, handleKeyup } = useWordle(solution)
+    const { currentGuess, guesses, isCorrect, turn, usedKeys, handleKeyup } = useWordle(solution)
+    const [showModal, setShowModal] = useState(false)
 
     //useEffect here is called when user inputs in the screen 
-    useEffect(()=>{
-        window.addEventListener('keyup',handleKeyup)
+    useEffect(() => {
+        window.addEventListener('keyup', handleKeyup)
 
         //if user is out of turns
-        if(turn>5){
+        if (turn > 5) {
             console.log("sorry, you are out of turns!")
-            window.removeEventListener('keyup',handleKeyup);
+            setTimeout(()=>setShowModal(true),1000)
+            window.removeEventListener('keyup', handleKeyup);
         }
 
         //if user guessed it right
-        if(isCorrect){
+        if (isCorrect) {
             console.log("congrats, you found it!")
-            window.removeEventListener('keyup',handleKeyup);
+            setTimeout(()=>setShowModal(true),1000)
+            window.removeEventListener('keyup', handleKeyup);
         }
 
         //cleanup function
-        return ()=> window.removeEventListener('keyup',handleKeyup);
-    },[handleKeyup])
+        return () => window.removeEventListener('keyup', handleKeyup);
+    }, [handleKeyup])
 
     return (
         <div>
@@ -34,8 +38,9 @@ const Wordle = ({ solution }) => {
             <p>Current guess - {currentGuess}</p>
             <p>Current history - {history}</p> */}
             {/* <p>Guesses - {guesses}</p> */}
-            <Grid guesses={guesses} currentGuess={currentGuess} turn={turn}/>
-            <KeyPad usedKeys={usedKeys}/>
+            <Grid guesses={guesses} currentGuess={currentGuess} turn={turn} />
+            <KeyPad usedKeys={usedKeys} />
+            {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
         </div>
     );
 

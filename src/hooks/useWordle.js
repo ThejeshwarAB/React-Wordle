@@ -7,6 +7,8 @@ const useWordle = (solution) => {
   const [guesses, setGuesses] = useState([...Array(6)]) //each guess is stored as an object
   const [history, setHistory] = useState([]) //each guess is stored as a string
   const [isCorrect, setIsCorrect] = useState(false) //if solution is found or not
+  const [usedKeys, setUsedKeys] = useState({}) //updates the keypad accordingly
+  //eg. {'a':'green','b':'grey','c':'yellow'}
 
   //formats each guess into an object
   //guesses store array of such objects
@@ -60,6 +62,29 @@ const useWordle = (solution) => {
 
     //set current guess to empty
     setCurrentGuess('')
+
+    setUsedKeys((prevUsedKeys)=>{
+      let newKeys = {...prevUsedKeys}
+
+      formattedGuess.forEach((element)=>{
+        const currentColor = newKeys[element.key]
+        if(element.color === 'green'){
+          newKeys[element.key]='green'
+          return 
+        }
+        if(element.color === 'yellow' && currentColor!=='green'){
+          newKeys[element.key]='yellow'
+          return
+        }
+        if(element.color === 'grey' && currentColor!=='yellow' && currentColor!=='grey'){
+          newKeys[element.key]='grey'
+          return
+        }
+      })
+
+      return newKeys
+    })
+
     console.log(guesses)
   }
 
@@ -108,7 +133,7 @@ const useWordle = (solution) => {
 
   }
 
-  return { turn, currentGuess, guesses, isCorrect, handleKeyup }
+  return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup }
 }
 
 export default useWordle;

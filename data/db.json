@@ -1,204 +1,78 @@
-{
-    "solutions": [
-        {
-            "id": 0,
-            "word": "swear"
-        },
-        {
-            "id": 1,
-            "word": "tense"
-        },
-        {
-            "id": 2,
-            "word": "prove"
-        },
-        {
-            "id": 3,
-            "word": "brown"
-        },
-        {
-            "id": 4,
-            "word": "money"
-        },
-        {
-            "id": 5,
-            "word": "graze"
-        },
-        {
-            "id": 6,
-            "word": "basis"
-        },
-        {
-            "id": 7,
-            "word": "stand"
-        },
-        {
-            "id": 8,
-            "word": "arrow"
-        },
-        {
-            "id": 9,
-            "word": "reign"
-        },
-        {
-            "id": 10,
-            "word": "yearn"
-        },
-        {
-            "id": 11,
-            "word": "great"
-        },
-        {
-            "id": 12,
-            "word": "flesh"
-        },
-        {
-            "id": 13,
-            "word": "lobby"
-        },
-        {
-            "id": 14,
-            "word": "dress"
-        },
-        {
-            "id": 15,
-            "word": "elect"
-        },
-        {
-            "id": 16,
-            "word": "robot"
-        },
-        {
-            "id": 17,
-            "word": "throw"
-        },
-        {
-            "id": 18,
-            "word": "troop"
-        },
-        {
-            "id": 19,
-            "word": "enemy"
-        },
-        {
-            "id": 20,
-            "word": "berry"
-        },
-        {
-            "id": 21,
-            "word": "asset"
-        },
-        {
-            "id": 22,
-            "word": "scene"
-        },
-        {
-            "id": 23,
-            "word": "virus"
-        },
-        {
-            "id": 24,
-            "word": "image"
-        },
-        {
-            "id": 25,
-            "word": "theme"
-        },
-        {
-            "id": 26,
-            "word": "tribe"
-        },
-        {
-            "id": 27,
-            "word": "swing"
-        },
-        {
-            "id": 28,
-            "word": "store"
-        },
-        {
-            "id": 29,
-            "word": "shift"
-        },
-        {
-            "id": 30,
-            "word": "strip"
-        },
-        {
-            "id": 31,
-            "word": "scrap"
-        },
-        {
-            "id": 32,
-            "word": "chair"
-        },
-        {
-            "id": 33,
-            "word": "crack"
-        },
-        {
-            "id": 34,
-            "word": "fraud"
-        },
-        {
-            "id": 35,
-            "word": "forge"
-        },
-        {
-            "id": 36,
-            "word": "humor"
-        },
-        {
-            "id": 37,
-            "word": "anger"
-        },
-        {
-            "id": 38,
-            "word": "layer"
-        },
-        {
-            "id": 39,
-            "word": "begin"
-        },
-        {
-            "id": 40,
-            "word": "plant"
-        },
-        {
-            "id": 41,
-            "word": "build"
-        },
-        {
-            "id": 42,
-            "word": "delay"
-        },
-        {
-            "id": 43,
-            "word": "loose"
-        },
-        {
-            "id": 44,
-            "word": "ideal"
-        },
-        {
-            "id": 45,
-            "word": "party"
-        },
-        {
-            "id": 46,
-            "word": "cheap"
-        },
-        {
-            "id": 47,
-            "word": "crime"
-        },
-        {
-            "id": 48,
-            "word": "chest"
-        },
-        {
-            "id": 49,
-            "word": "steak"
-        }
-    ]
-}
+{ "letters": [ 
+    { "key": "a" }, 
+    { "key": "b" }, 
+    { "key": "c" }, 
+    { "key": "d" }, 
+    { "key": "e" }, 
+    { "key": "f" }, 
+    { "key": "g" }, 
+    { "key": "h" }, 
+    { "key": "i" }, 
+    { "key": "j" }, 
+    { "key": "k" }, 
+    { "key": "l" }, 
+    { "key": "m" }, 
+    { "key": "n" }, 
+    { "key": "o" }, 
+    { "key": "p" },
+    { "key": "q" }, 
+    { "key": "r" }, 
+    { "key": "s" }, 
+    { "key": "t" }, 
+    { "key": "u" }, 
+    { "key": "v" }, 
+    { "key": "w" }, 
+    { "key": "x" }, 
+    { "key": "y" }, 
+    { "key": "z" } ], 
+    "solutions": [ 
+        { "id": 0, "word": "swear" }, 
+        { "id": 1, "word": "tense" }, 
+        { "id": 2, "word": "prove" }, 
+        { "id": 3, "word": "brown" }, 
+        { "id": 4, "word": "money" }, 
+        { "id": 5, "word": "graze" }, 
+        { "id": 6, "word": "basis" }, 
+        { "id": 7, "word": "stand" }, 
+        { "id": 8, "word": "arrow" }, 
+        { "id": 9, "word": "reign" }, 
+        { "id": 10, "word": "yearn" }, 
+        { "id": 11, "word": "great" }, 
+        { "id": 12, "word": "flesh" }, 
+        { "id": 13, "word": "lobby" }, 
+        { "id": 14, "word": "dress" }, 
+        { "id": 15, "word": "elect" }, 
+        { "id": 16, "word": "robot" }, 
+        { "id": 17, "word": "throw" }, 
+        { "id": 18, "word": "troop" }, 
+        { "id": 19, "word": "enemy" }, 
+        { "id": 20, "word": "berry" }, 
+        { "id": 21, "word": "asset" }, 
+        { "id": 22, "word": "scene" }, 
+        { "id": 23, "word": "virus" }, 
+        { "id": 24, "word": "image" }, 
+        { "id": 25, "word": "theme" }, 
+        { "id": 26, "word": "tribe" }, 
+        { "id": 27, "word": "swing" }, 
+        { "id": 28, "word": "store" }, 
+        { "id": 29, "word": "shift" }, 
+        { "id": 30, "word": "strip" }, 
+        { "id": 31, "word": "scrap" }, 
+        { "id": 32, "word": "chair" }, 
+        { "id": 33, "word": "crack" }, 
+        { "id": 34, "word": "fraud" }, 
+        { "id": 35, "word": "forge" }, 
+        { "id": 36, "word": "humor" }, 
+        { "id": 37, "word": "anger" }, 
+        { "id": 38, "word": "layer" }, 
+        { "id": 39, "word": "begin" }, 
+        { "id": 40, "word": "plant" }, 
+        { "id": 41, "word": "build" }, 
+        { "id": 42, "word": "delay" }, 
+        { "id": 43, "word": "loose" }, 
+        { "id": 44, "word": "ideal" }, 
+        { "id": 45, "word": "party" }, 
+        { "id": 46, "word": "cheap" }, 
+        { "id": 47, "word": "crime" }, 
+        { "id": 48, "word": "chest" }, 
+        { "id": 49, "word": "steak" } ] }

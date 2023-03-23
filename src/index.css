@@ -30,8 +30,8 @@ code {
   height: 60px;
 
   border: 1px solid silver;
-  border-radius: 25px;
-  box-shadow: 2px 5px lightgray;
+  /* border-radius: 25px; */
+  /* box-shadow: 2px 5px lightgray; */
   
   display: flex;
   align-items: center;
@@ -42,24 +42,121 @@ code {
 }
 
 .row > .green{
-  background-color: green;
-  border-color: green;
+  --background-color: green;
+  --border-color: green;
+  animation: flipAnimation 0.5s ease-in forwards;
 }
 
 .row > .grey{
-  background-color: grey;
-  border-color: grey;
+  --background-color: grey;
+  --border-color: grey;
+  animation: flipAnimation 0.5s ease-in forwards;
 }
 
 .row > .yellow{
-  background-color: orange;
-  border-color: orange;
+  --background-color: orange;
+  --border-color: orange;
+  animation: flipAnimation 0.5s ease forwards;
 }
 
 .row.past > div{
   color: white;
 }
 
-.row.current > div{
-  border-color: crimson;
+.row.current > div.filled{
+  animation: bounceAnimation 0.1s ease-in-out forwards;
+}
+
+.row > :nth-child(2){
+  animation-delay: 0.2s;
+}
+
+.row > :nth-child(3){
+  animation-delay: 0.4s;
+}
+
+.row > :nth-child(4){
+  animation-delay: 0.6s;
+}
+
+.row > :nth-child(5){
+  animation-delay: 0.8s;
+}
+
+.keypad{
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+.keypad > div{
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: silver;
+  display: inline-flex;
+  margin: 5px;
+  padding: 7.5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.keypad > div.green{
+  background-color: green;
+  color: white;
+  transition: all 0.25s ease-in;
+}
+
+.keypad > div.grey{
+  background-color: grey;
+  color: white;
+  transition: all 0.25s ease-in;
+}
+
+.keypad > div.yellow{
+  background-color: orange;
+  color: white;
+  transition: all 0.25s ease-in;
+}
+
+
+@keyframes flipAnimation{
+  0%{
+    transform: rotateX(0);
+    background-color: white;
+    border-color: silver;
+    color: black;
+  }
+  33%{
+    transform: rotateX(90deg);
+    background-color: white;
+    border-color: silver;
+    color: black;
+  }
+  66%{
+    transform: rotateX(90deg);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: white;
+  }
+  100%{
+    transform: rotateX(0);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: white;
+  }
+}
+
+@keyframes bounceAnimation {
+  0%{
+    transform: scale(1);
+    border-color: silver;
+  }
+  50%{
+    transform: scale(1.2);
+    border-color: black;
+  }
+  100%{
+    transform: scale(1);
+    border-color: black;
+  }
 }

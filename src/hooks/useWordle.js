@@ -32,7 +32,7 @@ const useWordle = (solution) => {
     formattedGuess.forEach((element, index) => {
       if (solutionArray.includes(element.key) && element.color !== 'green') {
         formattedGuess[index].color = 'yellow'
-        solutionArray[solutionArray.indexOf(element)] = null //to avoid double matching
+        solutionArray[solutionArray.indexOf(element.key)] = null //to avoid double matching
       }
     })
 
@@ -101,7 +101,9 @@ const useWordle = (solution) => {
 
     if (/^[a-zA-Z]$/.test(key)) {
       console.log(key)
-      setCurrentGuess((prev) => prev + key)
+      if (currentGuess.length < 5) {
+        setCurrentGuess((prev) => prev + key)
+      }
     }
 
   }

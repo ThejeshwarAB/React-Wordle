@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Wordle from './components/Wordle';
 
 function App() {
 
@@ -15,15 +16,14 @@ function App() {
         //assigns a random word from the list
         const randomSolution = data[Math.floor(Math.random() * data.length)]
         setSolution(randomSolution.word)
-
       })
       
   }, [setSolution])
 
   return (
     <div className="App">
-      <p style={{ textAlign: "center" }}>React Wordle</p>
-      <p>{solution}</p>
+      <p>React Wordle</p>
+      {solution && <Wordle solution={solution}/>}
     </div>
   );
 }
